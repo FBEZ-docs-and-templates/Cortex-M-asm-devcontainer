@@ -5,13 +5,18 @@ Devcontainer for assembler on a Cortex M MCU based on [Martin Hubacek example](h
 This examples is tested on a Nuvoton M031 but it will work on other Cortex MCUs. In the Makefile, change the `-Ttext 0x0000000` option depending on your MCU.
 
 
-## Compile 
+## Compilation
 
 To compile run `make`.
 
 ## Debugging
 
 Nuvoton requires a modified version of openOCD which is running on a windows machine. The `.bat` file containes the default path to run Nuvoton's openocd in its default path. 
+
+
+Once openocd is running on your windows host machine, you can connect your devcontainer using `make debug`
+
+### Detailed operation
 
 Once openocd is running on your windows host machine, you can connect your devcontainer gdb-multiarch in this way
 
