@@ -7,7 +7,7 @@ _start:
 
 loop:
     ADD R0, R0, #1
-    ADD R1, R1, #2
+    ADD R1, R1, #5
 b loop
    
 .global _start

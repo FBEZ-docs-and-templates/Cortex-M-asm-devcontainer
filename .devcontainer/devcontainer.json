@@ -11,7 +11,9 @@
 		"vscode": {
 			"extensions": [
 				"dan-c-underwood.arm",
-				"ms-vscode.hexeditor"
+				"ms-vscode.hexeditor",
+				"marus25.cortex-debug",
+				"mcu-debug.debug-tracker-vscode"
 			]
 		}
 	}
