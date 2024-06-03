@@ -9,12 +9,20 @@ This examples is tested on a Nuvoton M031 but it will work on other Cortex MCUs.
 
 To compile run `make`.
 
-## Debugging
+## Debugging with Nulink
 
 Nuvoton requires a modified version of openOCD which is running on a windows machine. The `.bat` file containes the default path to run Nuvoton's openocd in its default path. 
 
 
 Once openocd is running on your windows host machine, you can connect your devcontainer using `make debug`
+
+## Debugging with J-Link
+
+J-Link can be used by openocd, but it also comes with an optimized gdb. To use J-Link, directly start the `JLinkGDBServerCL.exe` with the appropriate flags, which will open a gdb server listening to port `2331`. You can use the .bat file in the repo, if the version matches. 
+
+Connect to the gdb client with `make debug` or `gdb-multiarch ./main.elf` and then connect to the JLinkGDBServer using `target extended-remote host.docker.internal:2331`.
+
+Once connected, you can flash the program via `load main.elf` and restart the debugging session with `monitor reset halt`.
 
 ### Detailed operation
 
